@@ -1,0 +1,61 @@
+{
+  "name": "rapidsafe-frontend",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@openfort/ecosystem-js": "^0.1.31",
+    "@radix-ui/react-checkbox": "^1.1.5",
+    "@rhinestone/module-sdk": "^0.2.7",
+    "@tanstack/query-sync-storage-persister": "^5.68.0",
+    "@tanstack/react-query": "^5.68.0",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "class-variance-authority": "^0.7.1",
+    "cuer": "^0.0.2",
+    "human-id": "^4.1.1",
+    "lucide": "^0.487.0",
+    "permissionless": "^0.2.39",
+    "process": "^0.11.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "react-scripts": "5.0.1",
+    "sonner": "^2.0.3",
+    "viem": "^2.30.5",
+    "wagmi": "^2.15.4"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "crypto-browserify": "^3.12.0",
+    "react-app-rewired": "^2.2.1",
+    "stream-browserify": "^3.0.0",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2",
+    "vm-browserify": "^1.1.2"
+  },
+  "packageManager": "yarn@1.22.17"
+}

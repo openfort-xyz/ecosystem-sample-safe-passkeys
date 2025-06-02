@@ -1,0 +1,39 @@
+name: Publish to NPM
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  Publish:
+    name: Publish Workflow
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: wallet-sdk
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Setup Node
+        uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
+        with:
+          node-version-file: wallet-sdk/.nvmrc
+          cache: 'yarn'
+          cache-dependency-path: wallet-sdk/yarn.lock
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Build
+        run: yarn build
+
+      - name: Configure npm for Authentication
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      - name: Release
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

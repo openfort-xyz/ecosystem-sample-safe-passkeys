@@ -1,0 +1,36 @@
+{
+    "name": "rapidsafe-backend",
+    "version": "0.0.1",
+    "main": "index.js",
+    "type": "commonjs",
+    "scripts": {
+        "clean": "shx rm -rf dist",
+        "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+        "build": "tsc",
+        "start": "node dist/index.js"
+    },
+    "keywords": [],
+    "author": "openfort",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "@types/cors": "^2.8.17",
+        "@types/express": "^4.17.21",
+        "@types/node": "^20.10.5",
+        "@types/yargs": "^17.0.24",
+        "express": "^4.18.2",
+        "ts-node": "^10.9.2",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "@types/helmet": "^4.0.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.5.0",
+        "helmet": "^8.1.0",
+        "path": "^0.12.7",
+        "viem": "^2.27.2",
+        "yargs": "^17.7.1"
+    },
+    "packageManager": "yarn@1.22.17"
+}
