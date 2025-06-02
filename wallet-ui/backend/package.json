@@ -1,13 +1,13 @@
 {
     "name": "rapidsafe-backend",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "main": "index.js",
     "type": "commonjs",
     "scripts": {
         "clean": "shx rm -rf dist",
         "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-        "build": "tsc",
-        "start": "node dist/index.js"
+        "build": "NODE_ENV=production tsc",
+        "start": "NODE_ENV=production node dist/index.js"
     },
     "keywords": [],
     "author": "openfort",
