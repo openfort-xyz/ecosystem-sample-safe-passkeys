@@ -41,3 +41,4 @@ playwright/.cache/
 
 .env
 package-lock.json
+certificates

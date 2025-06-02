@@ -198,7 +198,8 @@ export function useWalletActions() {
     {
       icon: Shield,
       title: "wallet_grantPermissions",
-      buttonText: "Grant Session",
+      buttonText: "Grant Permissions",
+      description: "Grant permissions to sign 10 times on your behalf.",
       error: sessionError,
       onClick: handleGrantPermissions,
       blockExplorerUrl: chain?.blockExplorers?.default.url!,
@@ -208,7 +209,8 @@ export function useWalletActions() {
     {
       icon: Boxes,
       title: "wallet_sendCalls",
-      buttonText: "Send Batch",
+      buttonText: "Fund and Buy",
+      description: "Fund your account and complete a mint in one go.",
       onClick: handleSendCalls,
       blockExplorerUrl: chain?.blockExplorers?.default.url!,
       isLoading: callsPending,

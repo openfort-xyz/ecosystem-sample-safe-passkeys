@@ -48,46 +48,45 @@ export function WalletConnect() {
 
   if (!isConnected) {
     return (
-      <div className="flex flex-col items-start space-y-2">
-        <h3 className="inline-block text-muted-foreground text-xs font-medium bg-transparent/50 rounded-full p-2">Select your provider</h3>
-        <p className="text-muted-foreground font-medium text-sm md:text-base">
-        {`Preview how it integrates with your existing wallet providers.`}
+      <div className="flex flex-col items-center justify-center w-full space-y-2">
+        <h3 className="inline-block text-muted-foreground text-xs font-medium bg-transparent/50 rounded-full p-2">
+          Select your provider
+        </h3>
+        <p className="text-muted-foreground font-medium text-sm md:text-base text-center">
+          {`Preview how it integrates with your existing wallet providers.`}
         </p>
-        <div className="flex flex-col gap-4 w-full">
-          <div className="flex gap-2">
-            
-            <Button
-              variant="outline"
-              className={`flex-1 font-medium justify-start rounded-full ${selectedWallet === 'wagmi' ? 'bg-muted/50 border-border' : ''}`}
-              onClick={() => setSelectedWallet('wagmi')}
-            >
-              <WagmiLogo />
-              Wagmi
-            </Button>
-            
-            <Button 
-              variant="outline"
-              className={`flex-1 justify-start rounded-full ${selectedWallet === 'rainbowkit' ? 'bg-muted/50 border-border' : ''}`}
-              onClick={() => setSelectedWallet('rainbowkit')}
-            >
-              <RainbowLogo />
-              RainbowKit
-            </Button>
+        <div className="flex flex-col gap-4 w-full max-w-xs">
+          <div className="flex gap-2 w-full">
+        <Button
+          variant="outline"
+          className={`flex-1 font-medium justify-start rounded-full ${selectedWallet === 'wagmi' ? 'bg-muted/50 border-border' : ''}`}
+          onClick={() => setSelectedWallet('wagmi')}
+        >
+          <WagmiLogo />
+          Wagmi
+        </Button>
+        <Button 
+          variant="outline"
+          className={`flex-1 justify-start rounded-full ${selectedWallet === 'rainbowkit' ? 'bg-muted/50 border-border' : ''}`}
+          onClick={() => setSelectedWallet('rainbowkit')}
+        >
+          <RainbowLogo />
+          RainbowKit
+        </Button>
           </div>
-          
           {selectedWallet === 'wagmi' ? (
-            <div className='flex'>
-              <Button
-                onClick={connectWallet}
-                className="inline-flex font-bold items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg shadow-sm px-6 py-5"
-              >
-                Sign in
-              </Button>
-            </div>
+        <div className='flex justify-center w-full'>
+          <Button
+            onClick={connectWallet}
+            className="inline-flex font-bold items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg shadow-sm px-6 py-5"
+          >
+            Continue with RapidSafe
+          </Button>
+        </div>
           ) : (
-            <div className="w-full">
-              <ConnectButton />
-            </div>
+        <div className="w-full flex justify-center">
+          <ConnectButton />
+        </div>
           )}
         </div>
       </div>
@@ -95,7 +94,7 @@ export function WalletConnect() {
   }
 
   return (
-    <Card className="border-0">
+    <Card className="w-full max-w-md p-6 border-green-900 bg-green">
       {address && (
         <div className="flex gap-3 items-center">
           <Button
@@ -125,8 +124,10 @@ export function WalletConnect() {
           >
             <LogOut className="w-3 h-3" /> Log out
           </Button>
+
         </div>
       )}
+      
     </Card>
   );
 }
