@@ -18,7 +18,7 @@ Visit the [live demo](https://rapidsafe.sample.openfort.xyz/).
 - 🎨 Beautiful Themes — Predesigned themes or full customization.
 - 🤝 Cross-platform support with [MWP](https://github.com/MobileWalletProtocol) for Unity, React Native and more.
 - 🔑 Self-custodial out of the box.
-- 🧠 Smart account with session keys, transaction batching, sponsored transactions.
+- 🧠 [Safe](https://safe.global/core) smart account with session keys, transaction batching, sponsored transactions.
 
 and much more...
 
