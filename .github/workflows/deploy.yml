@@ -39,7 +39,7 @@ jobs:
         uses: docker/build-push-action@471d1dc4e07e5cdedd4c2171150001c434f0b7a4 # v6.15.0
         with:
           push: true
-          tags: europe-west1-docker.pkg.dev/openfort/dockers/sample-ecosystem-backend:${{ github.event.release.tag_name }}
+          tags: europe-west1-docker.pkg.dev/openfort/dockers/sample-ecosystem-safe-backend:${{ github.event.release.tag_name }}
           file: ./wallet-ui/backend/Dockerfile
           context: ./wallet-ui/backend
           build-args: |
@@ -51,7 +51,7 @@ jobs:
         uses: docker/build-push-action@471d1dc4e07e5cdedd4c2171150001c434f0b7a4 # v6.15.0
         with:
           push: true
-          tags: europe-west1-docker.pkg.dev/openfort/dockers/sample-ecosystem-frontend:${{ github.event.release.tag_name }}
+          tags: europe-west1-docker.pkg.dev/openfort/dockers/sample-ecosystem-safe-frontend:${{ github.event.release.tag_name }}
           file: ./wallet-ui/frontend/Dockerfile
           context: ./wallet-ui/frontend
           build-args: |
@@ -63,7 +63,7 @@ jobs:
         uses: docker/build-push-action@471d1dc4e07e5cdedd4c2171150001c434f0b7a4 # v6.15.0
         with:
           push: true
-          tags: europe-west1-docker.pkg.dev/openfort/dockers/sample-ecosystem-sdk:${{ github.event.release.tag_name }}
+          tags: europe-west1-docker.pkg.dev/openfort/dockers/sample-ecosystem-safe-sdk:${{ github.event.release.tag_name }}
           file: ./usage-examples/wagmi-nextjs/Dockerfile
           context: ./usage-examples/wagmi-nextjs
           build-args: |
@@ -77,17 +77,17 @@ jobs:
       - name: Update frontend version
         uses: mikefarah/yq@8bf425b4d1344db7cd469a8d10a390876e0c77fd # v4.45.1
         with:
-          cmd: yq -i '.sample_ecosystem_frontend.tag = "${{ github.event.release.tag_name }}"' kube/values.yaml
+          cmd: yq -i '.sample_safe_ecosystem_frontend.tag = "${{ github.event.release.tag_name }}"' kube/values.yaml
 
       - name: Update backend version
         uses: mikefarah/yq@8bf425b4d1344db7cd469a8d10a390876e0c77fd # v4.45.1
         with:
-          cmd: yq -i '.sample_ecosystem_backend.tag = "${{ github.event.release.tag_name }}"' kube/values.yaml
+          cmd: yq -i '.sample_safe_ecosystem_backend.tag = "${{ github.event.release.tag_name }}"' kube/values.yaml
 
       - name: Update SDK sample version
         uses: mikefarah/yq@8bf425b4d1344db7cd469a8d10a390876e0c77fd # v4.45.1
         with:
-          cmd: yq -i '.sample_ecosystem_sdk.tag = "${{ github.event.release.tag_name }}"' kube/values.yaml
+          cmd: yq -i '.sample_safe_ecosystem_sdk.tag = "${{ github.event.release.tag_name }}"' kube/values.yaml
 
       - name: Update Infra Repository
         run: |
