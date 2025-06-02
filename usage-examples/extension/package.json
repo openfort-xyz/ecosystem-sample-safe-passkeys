@@ -15,7 +15,7 @@
     "postinstall": "wxt prepare"
   },
   "dependencies": {
-    "rapidsafe": "^0.0.1",
+    "rapidsafe": "^0.0.3",
     "react": ">=18",
     "react-dom": ">=18"
   },

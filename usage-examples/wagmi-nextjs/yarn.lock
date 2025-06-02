@@ -6032,10 +6032,10 @@ radix3@^1.1.2:
   resolved "https://registry.yarnpkg.com/radix3/-/radix3-1.1.2.tgz#fd27d2af3896c6bf4bcdfab6427c69c2afc69ec0"
   integrity sha512-b484I/7b8rDEdSDKckSSBA8knMpcdsXudlE/LNL639wFoHKwLbEkQFZHWEYwDC0wa0FKUcCY+GAF73Z7wxNVFA==
 
-rapidsafe@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/rapidsafe/-/rapidsafe-0.0.1.tgz#6aa27f73af411b6e12eeb6beb57aee3850447725"
-  integrity sha512-Iz1KioAXgT9QXwCykXYPimYOldiGSkRgRKUrfO8QOUPgQrnLG/XRY5RvsSBJJUdxDpfFG/MbscCVOAYeTnBzmg==
+rapidsafe@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/rapidsafe/-/rapidsafe-0.0.3.tgz#3fe701372e0e081370f7b224c2d4ad5c426ad2ab"
+  integrity sha512-bjKdQwBbfNzz6rTUEFQpbEHkbXGMoyGphZwXhl2WWzZFnshU5btDluJwnOlcBTcb75cz94SB6p4FQn8UvTm79g==
   dependencies:
     "@openfort/ecosystem-js" "^0.1.31"
 

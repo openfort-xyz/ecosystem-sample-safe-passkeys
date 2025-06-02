@@ -4234,10 +4234,10 @@ quick-format-unescaped@^4.0.3:
   resolved "https://registry.yarnpkg.com/quick-format-unescaped/-/quick-format-unescaped-4.0.4.tgz#93ef6dd8d3453cbc7970dd614fad4c5954d6b5a7"
   integrity sha512-tYC1Q1hgyRuHgloV/YXs2w15unPVh8qfu/qCTfhTYamaw7fyhumKa2yGpdSo87vY32rIclj+4fWYQXUMs9EHvg==
 
-rapidsafe@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/rapidsafe/-/rapidsafe-0.0.1.tgz#6aa27f73af411b6e12eeb6beb57aee3850447725"
-  integrity sha512-Iz1KioAXgT9QXwCykXYPimYOldiGSkRgRKUrfO8QOUPgQrnLG/XRY5RvsSBJJUdxDpfFG/MbscCVOAYeTnBzmg==
+rapidsafe@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/rapidsafe/-/rapidsafe-0.0.3.tgz#3fe701372e0e081370f7b224c2d4ad5c426ad2ab"
+  integrity sha512-bjKdQwBbfNzz6rTUEFQpbEHkbXGMoyGphZwXhl2WWzZFnshU5btDluJwnOlcBTcb75cz94SB6p4FQn8UvTm79g==
   dependencies:
     "@openfort/ecosystem-js" "^0.1.31"
 
