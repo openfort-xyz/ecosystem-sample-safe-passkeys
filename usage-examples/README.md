@@ -6,5 +6,5 @@ Within each directory, you'll find a `README.md` file with instructions on how t
 
 | Example Name                         | Description                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| [Wagmi with Next.js](./wagmi-nextjs) | Implement Rapidsafe in a Next.js application.                                                                    |
-| [Browser Extension](./extension)     | Implement Rapidsafe as a browser extension to make it available to all pages by injecting it to window.ethereum. |
+| [Wagmi with Next.js](./wagmi-nextjs) | Implement RapidSafe in a Next.js application.                                                                    |
+| [Browser Extension](./extension)     | Implement RapidSafe as a browser extension to make it available to all pages by injecting it to window.ethereum. |

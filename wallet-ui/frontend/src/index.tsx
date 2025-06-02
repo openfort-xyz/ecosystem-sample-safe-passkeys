@@ -22,7 +22,7 @@ const ProvidersWrapper = ({ children }: { children: React.ReactNode }) => {
       >
         <EcosystemProvider
           disableTransactionSimulation={false}
-          appName='Rapidsafe'
+          appName='RapidSafe'
           navigateTo={(appState) => {
             nav({
               pathname: appState?.to,

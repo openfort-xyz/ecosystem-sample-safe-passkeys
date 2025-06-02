@@ -1,6 +1,6 @@
 {
   "name": "extension",
-  "description": "Rapidsafe Extension",
+  "description": "RapidSafe Extension",
   "private": true,
   "version": "0.0.0",
   "type": "module",

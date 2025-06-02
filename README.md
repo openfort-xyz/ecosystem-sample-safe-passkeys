@@ -1,6 +1,6 @@
-# Rapidsafe Wallet
+# RapidSafe Wallet
 
-This is repository contains all code for Rapidsafe Wallet. It's created with [`@openfort/ecosystem-js`](https://www.openfort.io/docs/guides/ecosystem).
+This is repository contains all code for RapidSafe Wallet. It's created with [`@openfort/ecosystem-js`](https://www.openfort.io/docs/guides/ecosystem).
 
 <div align="center">
     <video width="100%" autoplay loop muted playsinline>

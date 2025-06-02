@@ -71,7 +71,7 @@ export function Landing() {
           
           {/* Updated heading and subheading */}
           <h2 className="mt-10 text-center text-2xl font-semibold leading-6 text-gray-900">
-            Welcome to Realm
+            Welcome to RapidSafe
           </h2>
           <p className="mt-2 text-center text-base text-gray-500">
             Log in or sign up to get started.

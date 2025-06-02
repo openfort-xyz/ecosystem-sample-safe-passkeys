@@ -287,7 +287,7 @@ export function rapidsafe(config: RapidsafeParameters = {}) {
             },
             type: 'injected',
             id: 'xyz.openfort.rapidsafe',
-            name: 'Rapidsafe',
+            name: 'RapidSafe',
         }
     })
 }

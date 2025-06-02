@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Rapidsafe Wallet - Demo',
-  description: 'A demo of Rapidsafe Wallet integration',
+  title: 'RapidSafe Wallet - Demo',
+  description: 'A demo of RapidSafe Wallet integration',
 };
 
 export default function RootLayout({

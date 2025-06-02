@@ -13,7 +13,7 @@ class EcosystemWallet extends Client {
             appearance: {
                 icon: `data:image/vndmicrosofticon;base64,${icon}`,
                 logo: 'https://blog-cms.openfort.xyz/uploads/realm_logo_e7139e4dfe.png',
-                name: 'Rapidsafe',
+                name: 'RapidSafe',
                 reverseDomainNameSystem: 'xyz.openfort.rapidsafe'
             }
         });
