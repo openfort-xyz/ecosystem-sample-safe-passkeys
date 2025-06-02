@@ -1,6 +1,6 @@
 {
   "name": "@examples/wallets-connect-with-nextjs",
-  "version": "0.0.83",
+  "version": "0.0.1",
   "dependencies": {
     "@tanstack/react-query": "^5.51.11",
     "next": "14.2.25",

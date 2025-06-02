@@ -17,7 +17,7 @@ export function Header() {
         </a>
       </h1>
       <p className="text-muted-foreground font-medium text-sm md:text-base">
-        {`Rapidsafe is a demo wallet created with `}
+        {`This a demo cross-app wallet created with `}
         <span className="flex items-center">
           <Logo className="inline-block h-6 mr-2" />
           <span className="flex items-center font-bold hover:underline">
@@ -31,7 +31,7 @@ export function Header() {
           </span>
         </span>
         <br/>
-        {`It's a powerful cross-app wallet with simple UX.`}
+        {`It's a powerful passkey based wallet with simple UX with the Safe smart account.`}
       </p>
     </div>
   );

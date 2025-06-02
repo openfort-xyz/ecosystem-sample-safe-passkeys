@@ -1,8 +1,5 @@
 FROM node:20.18-slim
 
-ARG NEXT_PUBLIC_POLICY_ID
-ENV NEXT_PUBLIC_POLICY_ID=$NEXT_PUBLIC_POLICY_ID
-
 RUN apt-get update -y && apt-get install -y openssl \
     python3 \
     make \
