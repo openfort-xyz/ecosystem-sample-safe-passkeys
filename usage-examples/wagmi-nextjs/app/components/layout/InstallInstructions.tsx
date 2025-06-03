@@ -7,7 +7,7 @@ export function InstallInstructions() {
   return (
     <div className="space-y-2">
       <div className="flex justify-center">
-        <h3 className="inline-block text-muted-foreground text-xs font-medium bg-transparent/50 rounded-full p-2 text-center">
+        <h3 className="inline-block text-foreground text-xs font-medium bg-transparent/50 rounded-full p-2 text-center">
           Install RapidSafe
         </h3>
       </div>

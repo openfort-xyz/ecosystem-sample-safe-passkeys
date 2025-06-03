@@ -53,7 +53,7 @@ export function WalletConnect() {
           Select your provider
         </h3>
         <p className="text-muted-foreground font-medium text-sm md:text-base text-center">
-          {`Preview how it integrates with your existing wallet providers.`}
+          {`Preview how it integrates with your existing wallet connectors.`}
         </p>
         <div className="flex flex-col gap-4 w-full max-w-xs">
           <div className="flex gap-2 w-full">

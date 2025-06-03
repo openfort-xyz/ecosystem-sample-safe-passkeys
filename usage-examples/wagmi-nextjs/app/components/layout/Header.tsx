@@ -1,6 +1,5 @@
 "use client";
 
-import { ExternalLink } from "lucide-react";
 import { Logo } from "../Logo";
 
 export function Header() {
@@ -20,16 +19,25 @@ export function Header() {
         {`This a demo cross-app wallet created with `}
         <span className="flex items-center justify-center">
           <Logo className="inline-block h-6 mr-2" />
-          <span className="flex items-center font-bold hover:underline">
+          <span className="flex items-center font-bold underline pr-1">
             <a key={'openfort-documentation'} href={'https://www.openfort.io/docs/products/cross-app-wallet/setup'} 
               target="_blank" 
               rel="noopener noreferrer"
             >
               Ecosystem SDK 
             </a>
-            <ExternalLink className="w-3 h-3 ml-1 text-muted-foreground" /> 
           </span>
-          , SAFE smart account and Rhinestone passkey module.
+          {` and `}
+           <span className="flex items-center font-bold underline px-1">
+            <a key={'safe-documentation'} href={'https://safe.global/'} 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+               Safe 
+            </a>
+          </span>
+          {` smart account.`}
+
         </span>
         <br/>
         {`It's a powerful passkey based wallet with simple UX and seamless integration.`}

@@ -6,7 +6,7 @@ import {
   useSignTypedData,
   useAccount,
 } from 'wagmi';
-import { useWriteContracts } from 'wagmi/experimental'
+import { useSendCalls } from 'wagmi'
 import { useCallback, useState } from 'react';
 import { BaseError, createWalletClient, custom, parseAbi } from 'viem';
 import { erc20Abi } from "@/app/utils/abi";
@@ -27,7 +27,7 @@ export function useWalletActions() {
   const { signTypedData, data: typedSignature, isPending: isSigningTyped, error: typedError } = useSignTypedData();
   const { signMessage, data: personalSignature, isPending: isSigningPersonal, error: personalError } = useSignMessage();
   // Batched transaction hooks
-  const { data: bundleIdentifier, isPending: callsPending, error: callsError, writeContracts } = useWriteContracts();
+  const { data: bundleIdentifier, isPending: callsPending, error: callsError, sendCalls } = useSendCalls();
 
   // Transaction handlers
   const handleExampleTx = useCallback(() => {
@@ -87,23 +87,24 @@ export function useWalletActions() {
   }, [signMessage]);
 
   const handleSendCalls = useCallback(() => {
-    writeContracts({
-      contracts: [
+    sendCalls({
+      calls: [
         {
-          address: '0xdc2de190a921d846b35eb92d195c9c3d9c08d1c2',
+          to: '0xdc2de190a921d846b35eb92d195c9c3d9c08d1c2',
           abi: parseAbi(['function mint(uint256)']),
           functionName: 'mint',
-          args: [1000000000000000000],
+          args: [BigInt(1000000000000000000)],
         },
         {
-          address: '0xdc2de190a921d846b35eb92d195c9c3d9c08d1c2',
+          to: '0xdc2de190a921d846b35eb92d195c9c3d9c08d1c2',
           abi: parseAbi(['function transfer(address,uint256) returns (bool)']),
           functionName: 'transfer',
-          args: ['0xd2135CfB216b74109775236E36d4b433F1DF507B',10000000000000000],
+          args: ['0xd2135CfB216b74109775236E36d4b433F1DF507B',BigInt(10000000000000000)],
         },
       ],
-    });
-  }, [writeContracts]);
+    },
+  );
+  }, [sendCalls]);
 
   const handleGrantPermissions = useCallback(async() => {
     const provider = await connector?.getProvider()
