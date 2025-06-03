@@ -1,5 +1,5 @@
 import { Actions } from '@openfort/ecosystem-js/core';
-import { Button, HeaderSection, Layout, Store, useSearch } from '@openfort/ecosystem-js/react';
+import { Button, HeaderSection, Layout, Store, useEcosystem, useSearch } from '@openfort/ecosystem-js/react';
 import clsx from 'clsx';
 import { Check, Plug, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -23,9 +23,9 @@ const bulletPoints: BulletPoint[] = [
 ];
 
 function EthRequestAccounts() {
+  const { loading: isLoading, setLoading } = useEcosystem();
   const searchParams = useSearch<'eth_requestAccounts'>();
   const { address } = useAccount();
-  const [isApproving, setIsApproving] = useState(false);
   const [respond, setRespond] = useState<boolean>(false);
   const { connectors, connect } = useConnect();
   
@@ -54,7 +54,7 @@ function EthRequestAccounts() {
   }, [address, respond, searchParams]);
 
   const handleSignin = async () => {
-    setIsApproving(true);
+    setLoading(true);
     try {
       // Use our context function to set auth type to signin
       await initiateSignin();
@@ -70,12 +70,12 @@ function EthRequestAccounts() {
       connect({ connector });
       setRespond(true);
     } finally {
-      setIsApproving(false);
+      setLoading(false);
     }
   };
 
   const handleSignUp = async () => {
-    setIsApproving(true);
+    setLoading(true);
     try {
       // Use our context function to set auth type to signup
       await initiateSignup();
@@ -91,11 +91,10 @@ function EthRequestAccounts() {
       connect({ connector });
       setRespond(true);
     } finally {
-      setIsApproving(false);
+      setLoading(false);
     }
   };
 
-  const isLoading = isApproving;
   const isIframe = Store.useStore((s) => s.mode === 'iframe');
 
   return (
