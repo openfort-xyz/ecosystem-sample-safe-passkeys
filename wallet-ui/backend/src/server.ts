@@ -23,7 +23,6 @@ export class Server {
     this.app = express();
     this.port = process.env.PORT ?? 3000;
     this.apiHandler = new APIHandler(options.privateKey, options.publicClient, options.walletClient);
-
     // Configure CORS based on environment
     const corsOptions = {
       origin: process.env.NODE_ENV === 'production'

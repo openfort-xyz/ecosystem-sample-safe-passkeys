@@ -1,6 +1,6 @@
 {
   "name": "rapidsafe-frontend",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "private": true,
   "dependencies": {
     "@openfort/ecosystem-js": "^0.1.31",
