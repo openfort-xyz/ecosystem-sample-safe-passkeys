@@ -1,6 +1,6 @@
 {
   "name": "@examples/wallets-connect-with-nextjs",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-alert-dialog": "^1.1.1",
@@ -35,12 +35,12 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.446.0",
     "next": "14.2.25",
-    "rapidsafe": "^0.0.1",
+    "rapidsafe": "^0.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
-    "wagmi": "^2.11.3"
+    "wagmi": "^2.15.4"
   },
   "devDependencies": {
     "@types/node": "^20",

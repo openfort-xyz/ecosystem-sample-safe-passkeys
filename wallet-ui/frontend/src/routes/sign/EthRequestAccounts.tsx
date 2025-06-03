@@ -23,11 +23,11 @@ const bulletPoints: BulletPoint[] = [
 ];
 
 function EthRequestAccounts() {
-  const { loading: isLoading, setLoading } = useEcosystem();
+  const { loading, setLoading } = useEcosystem();
   const searchParams = useSearch<'eth_requestAccounts'>();
   const { address } = useAccount();
   const [respond, setRespond] = useState<boolean>(false);
-  const { connectors, connect } = useConnect();
+  const { connectors, connect, error, isPending } = useConnect();
   
   // Use our enhanced Safe context
   const { initiateSignin, initiateSignup } = useRapidsafe();
@@ -96,9 +96,10 @@ function EthRequestAccounts() {
   };
 
   const isIframe = Store.useStore((s) => s.mode === 'iframe');
+  const isLoading = loading || isPending;
 
   return (
-    <Layout disabled={isLoading} minHeight={230} maxWidth={isIframe ? 360 : undefined}>
+    <Layout disabled={isLoading || isPending} minHeight={230} maxWidth={isIframe ? 360 : undefined}>
       <HeaderSection
         onIconClick={false}
         isLoading={isLoading}
@@ -114,10 +115,10 @@ function EthRequestAccounts() {
 
       <div className='mx-4 mt-4'>
         <div className="overflow-hidden !mt-0">
-        <div className={clsx(
-            'flex items-start justify-center flex-col gap-2 transform transform-all duration-1000',
-        )}
-        >
+          <div className={clsx(
+              'flex items-start justify-center flex-col gap-2 transform transform-all duration-1000',
+          )}
+          >
             <div className="flex items-start justify-center flex-col gap-3 mx-1">
             {
                 bulletPoints.map((bulletPoint) => (
@@ -139,7 +140,13 @@ function EthRequestAccounts() {
                 ))
             }
             </div>
-        </div>
+          </div>
+          {error && <div className={clsx('rounded-lg bg-danger-tint px-3 py-2 text-danger mt-5')}>
+            <div className="font-medium text-[14px]">Error</div>
+            <div className="text-[14px] text-body">
+              {String(error.cause || error.message)}
+            </div>
+          </div>}
         </div>
       </div>
       <div
