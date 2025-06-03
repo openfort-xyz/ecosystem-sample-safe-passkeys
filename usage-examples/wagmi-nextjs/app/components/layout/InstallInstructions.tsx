@@ -5,8 +5,12 @@ import { Card } from '../ui/card';
 export function InstallInstructions() {
 
   return (
-    <div className="space-y-4">
-      <h3 className="inline-block text-muted-foreground text-xs font-medium bg-transparent/50 rounded-full p-2">Install RapidSafe</h3>
+    <div className="space-y-2">
+      <div className="flex justify-center">
+        <h3 className="inline-block text-foreground text-xs font-medium bg-transparent/50 rounded-full p-2 text-center">
+          Install RapidSafe
+        </h3>
+      </div>
       {/* Code snippet card */}
       <Card className="bg-card border border-border p-0 overflow-hidden">
         <div className="bg-muted/50 p-2 text-sm font-mono">

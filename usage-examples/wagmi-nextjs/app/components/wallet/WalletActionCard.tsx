@@ -39,7 +39,7 @@ export function WalletActionCard({
   payload,
   isConfirmed,
   onClick,
-  description = "This is a wallet action that interacts with the blockchain.",
+  description = "This is a wallet action to SIWE",
   customTitle
 }: WalletActionCardProps) {
   const [inputValue, setInputValue] = useState('');
@@ -56,29 +56,15 @@ export function WalletActionCard({
   return (
     <Card className="p-4 bg-blue-50 border border-blue-100 rounded-xl shadow-sm hover:shadow-md transition-shadow">
       <div className="flex flex-col h-full">
-        <div className="mb-3 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="p-1.5 rounded-md bg-blue-100 text-blue-500">
-              <Icon className="w-3.5 h-3.5" />
-            </div>
-            <h3 className="text-sm font-medium text-gray-600">{displayTitle}</h3>
-          </div>
-          
-          <TooltipProvider delayDuration={0}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <button className="rounded-full p-1 text-blue-400 hover:text-blue-600 hover:bg-blue-100">
-                  <Info className="w-3.5 h-3.5" />
-                </button>
-              </TooltipTrigger>
-              <TooltipContent side="top" className="max-w-xs bg-white border border-blue-100 shadow-md">
-                <p className="text-xs text-gray-600">{description}</p>
-                <p className="text-xs text-gray-500 mt-1">Call: {title}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        </div>
-        
+        <Button
+          onClick={() => onClick(inputValue)}
+          disabled={isLoading}
+          className="w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-800 text-white rounded-lg shadow-sm disabled:opacity-50 disabled:cursor-not-allowed text-xs font-medium py-5 mb-2"
+        >
+          <Icon className="w-4 h-4" />
+          {isLoading ? 'Processing...' : buttonText}
+        </Button>
+        <div className="text-xs text-gray-500 mb-4 text-center">{description}</div>
         <div className="mt-auto space-y-3">
           {input && (
             <div className="space-y-1.5">
@@ -93,15 +79,6 @@ export function WalletActionCard({
               </div>
             </div>
           )}
-          
-          <Button
-            onClick={() => onClick(inputValue)}
-            disabled={isLoading}
-            className="w-full bg-black hover:bg-gray-800 text-white rounded-lg shadow-sm disabled:opacity-50 disabled:cursor-not-allowed text-xs font-medium py-5"
-          >
-            {isLoading ? 'Processing...' : buttonText}
-          </Button>
-          
           {error && (
             <p className="text-xs text-red-500">
               {(error as BaseError).details || error.message}
@@ -114,7 +91,6 @@ export function WalletActionCard({
               status={status}
             />
           )}
-          
           {payload && (
             <div className="mt-2">
               <div className="text-nowrap overflow-x-auto text-xs text-gray-600 p-2 bg-blue-50 rounded-lg border border-blue-100">

@@ -19,20 +19,17 @@ export default function Home() {
       <WagmiProvider config={config}>
         <QueryClientProvider client={queryClient}>
           <RainbowKitProvider modalSize="compact">
-            <div className="max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-12 gap-6 md:gap-8">
-              <div className="w-full md:col-span-4 flex flex-col space-y-6">
-                <Header />
-
-                <div className="space-y-6">
+            {/* Centered Header and WalletStatus at the top */}
+            <div className="flex flex-col items-center mb-8">
+              <Header />
+              <div className="mt-4">
+                 <div className="space-y-6">
                   <InstallInstructions />
                   <WalletConnect />
                 </div>
-
-                <div className="mt-auto pt-6">
-                  <Footer />
-                </div>
               </div>
-
+            </div>
+            <div className="max-w-5xl mx-auto flex flex-col items-center justify-center md:grid md:grid-cols-6 gap-6 md:gap-8">
               <div className="w-full md:col-span-8 bg-muted/50 rounded-lg shadow-md overflow-hidden flex flex-col">
                 <div className="p-4 md:p-6 flex flex-col items-center sm:items-start">
                   <div className="bg-slate-500 rounded-full mb-4 self-center sm:self-start">
@@ -40,13 +37,16 @@ export default function Home() {
                       Your application
                     </p>
                   </div>
-                  <WalletStatus />
+                   <WalletStatus />
                 </div>
               </div>
             </div>
           </RainbowKitProvider>
         </QueryClientProvider>
       </WagmiProvider>
+    <div className="flex justify-center items-center mt-auto pt-6">
+      <Footer />
+    </div>
     </main>
   );
 }

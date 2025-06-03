@@ -4,12 +4,12 @@ const FOOTER_LINKS = [
   {
     icon: FileText,
     title: "Documentation",
-    link:"https://www.openfort.io/docs/guides/ecosystem"
+    link:"https://www.openfort.io/docs/products/cross-app-wallet/setup"
   },
   {
     icon: Github,
     title: "GitHub",
-    link: "https://github.com/openfort-xyz/ecosystem-sample"
+    link: "https://github.com/openfort-xyz/ecosystem-sample-safe-passkeys"
   },
   {
     icon: Youtube,
