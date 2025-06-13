@@ -1,3 +1,5 @@
+[banner-image]: [https://blog-cms.openfort.xyz/uploads/openfortjs_f52fdc3f2d.png](https://www.openfort.io/_next/image?url=https%3A%2F%2Fblog-cms.openfort.xyz%2Fuploads%2Frapidsafe_655a12bfdc.png&w=2048&q=75)
+
 # RapidSafe Wallet
 
 This is repository contains all code for RapidSafe Wallet. It's created with [`@openfort/ecosystem-js`](https://www.openfort.io/docs/guides/ecosystem).
