@@ -1,4 +1,5 @@
-![Illustration_02](https://blog-cms.openfort.xyz/uploads/openfortjs_f52fdc3f2d.png)
+
+![rapidsafe](https://github.com/user-attachments/assets/d20b9b86-1c00-48df-b870-4e5b3d603695)
 
 # RapidSafe Wallet
 
