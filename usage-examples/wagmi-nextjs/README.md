@@ -2,8 +2,6 @@
 
 This example showcases how to use the RapidSafe Wallet react SDK inside a [Next.js](https://nextjs.org/) application.
 
-Visit the [live demo](https://rapidsafe.sample.openfort.xyz/).
-
 ## Local Development
 1. Install dependencies
 
