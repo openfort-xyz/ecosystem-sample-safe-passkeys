@@ -12,7 +12,6 @@ This is repository contains all code for RapidSafe Wallet. It's created with [`@
     </video>
 </div>
 
-Visit the [live demo](https://rapidsafe.sample.openfort.xyz/).
 
 ## Features
 
